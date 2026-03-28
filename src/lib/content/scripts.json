@@ -1,0 +1,17 @@
+[
+  {"id":"scr-1","type":"script-practice","theme":"social","difficulty":1,"scenario":"Introducing Yourself","script":"Hi, my name is... Nice to meet you.","context":"Meeting someone new at a gathering"},
+  {"id":"scr-2","type":"script-practice","theme":"social","difficulty":1,"scenario":"Asking for Help","script":"Excuse me, could you help me with something?","context":"Approaching someone for assistance"},
+  {"id":"scr-3","type":"script-practice","theme":"food","difficulty":1,"scenario":"Ordering Coffee","script":"I would like a coffee, please. Medium with cream.","context":"At a coffee shop counter"},
+  {"id":"scr-4","type":"script-practice","theme":"food","difficulty":2,"scenario":"Ordering at a Restaurant","script":"I'll have the chicken, please. And water to drink.","context":"Telling the waiter your order"},
+  {"id":"scr-5","type":"script-practice","theme":"health","difficulty":2,"scenario":"Checking In at the Doctor","script":"I have an appointment at two o'clock. My name is...","context":"Arriving at the doctor's office"},
+  {"id":"scr-6","type":"script-practice","theme":"social","difficulty":1,"scenario":"Asking for Time","script":"Please give me a second. I'm having trouble finding my word.","context":"When you need a moment to think"},
+  {"id":"scr-7","type":"script-practice","theme":"social","difficulty":1,"scenario":"Making a Phone Call","script":"Hello, this is... I'm calling about...","context":"Starting a phone conversation"},
+  {"id":"scr-8","type":"script-practice","theme":"travel","difficulty":2,"scenario":"Asking for Directions","script":"Excuse me, how do I get to the nearest bus stop?","context":"Finding your way in town"},
+  {"id":"scr-9","type":"script-practice","theme":"food","difficulty":1,"scenario":"Asking for the Check","script":"Could we have the check, please? Thank you.","context":"Ready to leave a restaurant"},
+  {"id":"scr-10","type":"script-practice","theme":"health","difficulty":2,"scenario":"Describing Symptoms","script":"I have been feeling... for the past few days.","context":"Telling the doctor how you feel"},
+  {"id":"scr-11","type":"script-practice","theme":"social","difficulty":1,"scenario":"Saying Goodbye","script":"It was nice seeing you. Take care!","context":"Ending a conversation"},
+  {"id":"scr-12","type":"script-practice","theme":"social","difficulty":2,"scenario":"Accepting an Invitation","script":"That sounds great. What time should I be there?","context":"Someone invites you to an event"},
+  {"id":"scr-13","type":"script-practice","theme":"travel","difficulty":2,"scenario":"Hotel Check-In","script":"I have a reservation under the name... for two nights.","context":"Checking into a hotel"},
+  {"id":"scr-14","type":"script-practice","theme":"health","difficulty":3,"scenario":"Pharmacy Pickup","script":"I'm here to pick up a prescription for...","context":"At the pharmacy counter"},
+  {"id":"scr-15","type":"script-practice","theme":"work","difficulty":2,"scenario":"Leaving a Voicemail","script":"Hi, this is... Please call me back at...","context":"When someone doesn't answer the phone"}
+]

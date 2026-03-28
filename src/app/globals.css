@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #4F7CAC;
+  --color-primary-light: #7BA3CC;
+  --color-primary-dark: #3A5F8A;
+  --color-accent: #E8A87C;
+  --color-accent-light: #F0C4A8;
+  --color-success: #7BC47F;
+  --color-success-light: #D4EDDA;
+  --color-warning: #E8C97C;
+  --color-warning-light: #FFF3CD;
+  --color-surface: #FAFBFC;
+  --color-surface-warm: #FDF8F4;
+  --color-card: #FFFFFF;
+  --color-text: #2D3748;
+  --color-text-light: #718096;
+  --color-text-muted: #A0AEC0;
+  --color-border: #E2E8F0;
+  --color-background: #F7F8FA;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe, calming animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+  .animate-points {
+    animation: pointsFloat 1s ease-out forwards;
+  }
+  .animate-bounce-in {
+    animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .animate-points-pop {
+    animation: pointsPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .animate-count-up {
+    opacity: 0;
+    animation: countUp 0.4s ease-out forwards;
+  }
+  .animate-slide-in-right {
+    opacity: 0;
+    animation: slideInRight 0.4s ease-out forwards;
+  }
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pointsFloat {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-30px); }
+}
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { transform: scale(1.1); }
+  70% { transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes pointsPop {
+  0% { opacity: 0; transform: scale(0.5) translateY(10px); }
+  60% { opacity: 1; transform: scale(1.2) translateY(-5px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(79, 124, 172, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(79, 124, 172, 0.15); }
+}
+
+/* Celebration effects */
+@keyframes emojiBurst {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+  30% { opacity: 1; transform: translate(calc(-50% + var(--burst-x) * 0.3), calc(-50% + var(--burst-y) * 0.3)) scale(1.2); }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--burst-x)), calc(-50% + var(--burst-y))) scale(0.4); }
+}
+.animate-emoji-burst {
+  animation: emojiBurst 0.8s ease-out forwards;
+}
+
+@keyframes ringExpand {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+  60% { opacity: 0.8; transform: translate(-50%, -50%) scale(4); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(6); }
+}
+.animate-ring-expand {
+  animation: ringExpand 0.8s ease-out forwards;
+}
+
+@keyframes emojiFloat {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  30% { opacity: 1; transform: translateY(-20px) scale(1.1); }
+  100% { opacity: 0; transform: translateY(-60px) scale(0.6); }
+}
+.animate-emoji-float {
+  animation: emojiFloat 1.2s ease-out forwards;
+}
+
+@keyframes sparkleFall {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0); }
+  15% { opacity: 1; transform: translateY(15vh) rotate(90deg) scale(1); }
+  85% { opacity: 0.8; transform: translateY(75vh) rotate(270deg) scale(0.8); }
+  100% { opacity: 0; transform: translateY(100vh) rotate(360deg) scale(0); }
+}
+.animate-sparkle-fall {
+  animation: sparkleFall 1.5s ease-in forwards;
+}
+
+@keyframes confettiPiece {
+  0% { opacity: 1; transform: translateY(0) translateX(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateY(100vh) translateX(var(--confetti-drift)) rotate(var(--confetti-spin)); }
+}
+.animate-confetti-piece {
+  animation: confettiPiece 1.5s ease-in forwards;
+}
+
+@keyframes fireworkParticle {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0.3); }
+  40% { opacity: 1; transform: translate(calc(-50% + var(--fw-x) * 0.5), calc(-50% + var(--fw-y) * 0.5)) scale(1); }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--fw-x)), calc(-50% + var(--fw-y))) scale(0); }
+}
+.animate-firework-particle {
+  animation: fireworkParticle 0.9s ease-out forwards;
+}
+
+@keyframes starSpin {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--orbit-start)) translateX(0) scale(0); }
+  30% { opacity: 1; transform: translate(-50%, -50%) rotate(var(--orbit-start)) translateX(var(--orbit-radius)) scale(1.2); }
+  80% { opacity: 0.8; transform: translate(-50%, -50%) rotate(calc(var(--orbit-start) + 180deg)) translateX(var(--orbit-radius)) scale(0.8); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(calc(var(--orbit-start) + 270deg)) translateX(var(--orbit-radius)) scale(0); }
+}
+.animate-star-spin {
+  animation: starSpin 1.2s ease-out forwards;
 }

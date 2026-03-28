@@ -1,0 +1,137 @@
+[
+  {
+    "id": "cat-animals-1",
+    "type": "category-naming",
+    "theme": "home",
+    "difficulty": 1,
+    "category": "Animals",
+    "correctWords": ["dog", "cat", "bird", "fish", "rabbit", "hamster", "horse", "cow"],
+    "distractors": ["table", "shoe", "lamp", "cloud"]
+  },
+  {
+    "id": "cat-fruits-1",
+    "type": "category-naming",
+    "theme": "food",
+    "difficulty": 1,
+    "category": "Fruits",
+    "correctWords": ["apple", "banana", "orange", "grape", "strawberry", "watermelon", "peach", "pear"],
+    "distractors": ["carrot", "bread", "chicken", "rice"]
+  },
+  {
+    "id": "cat-kitchen-1",
+    "type": "category-naming",
+    "theme": "home",
+    "difficulty": 1,
+    "category": "Things in a Kitchen",
+    "correctWords": ["stove", "fridge", "sink", "plate", "cup", "fork", "knife", "spoon"],
+    "distractors": ["pillow", "lamp", "shoe", "book"]
+  },
+  {
+    "id": "cat-clothing-1",
+    "type": "category-naming",
+    "theme": "home",
+    "difficulty": 1,
+    "category": "Clothing",
+    "correctWords": ["shirt", "pants", "socks", "shoes", "hat", "jacket", "dress", "belt"],
+    "distractors": ["hammer", "plate", "window", "tree"]
+  },
+  {
+    "id": "cat-sports-1",
+    "type": "category-naming",
+    "theme": "sports",
+    "difficulty": 2,
+    "category": "Sports",
+    "correctWords": ["baseball", "basketball", "football", "soccer", "tennis", "golf", "swimming", "running"],
+    "distractors": ["cooking", "reading", "sleeping", "driving"]
+  },
+  {
+    "id": "cat-vegetables-1",
+    "type": "category-naming",
+    "theme": "food",
+    "difficulty": 1,
+    "category": "Vegetables",
+    "correctWords": ["carrot", "broccoli", "potato", "tomato", "onion", "lettuce", "corn", "peas"],
+    "distractors": ["apple", "bread", "milk", "chicken"]
+  },
+  {
+    "id": "cat-tools-1",
+    "type": "category-naming",
+    "theme": "work",
+    "difficulty": 2,
+    "category": "Tools",
+    "correctWords": ["hammer", "screwdriver", "wrench", "saw", "drill", "pliers", "tape measure", "level"],
+    "distractors": ["pillow", "cup", "shoe", "flower"]
+  },
+  {
+    "id": "cat-bathroom-1",
+    "type": "category-naming",
+    "theme": "home",
+    "difficulty": 1,
+    "category": "Things in a Bathroom",
+    "correctWords": ["soap", "towel", "toothbrush", "mirror", "shower", "toilet", "sink", "shampoo"],
+    "distractors": ["stove", "bed", "desk", "tree"]
+  },
+  {
+    "id": "cat-transport-1",
+    "type": "category-naming",
+    "theme": "travel",
+    "difficulty": 1,
+    "category": "Transportation",
+    "correctWords": ["car", "bus", "train", "airplane", "bicycle", "boat", "taxi", "subway"],
+    "distractors": ["table", "dog", "book", "hat"]
+  },
+  {
+    "id": "cat-body-1",
+    "type": "category-naming",
+    "theme": "health",
+    "difficulty": 1,
+    "category": "Body Parts",
+    "correctWords": ["hand", "foot", "head", "arm", "leg", "eye", "ear", "nose"],
+    "distractors": ["chair", "pen", "cup", "shoe"]
+  },
+  {
+    "id": "cat-furniture-1",
+    "type": "category-naming",
+    "theme": "home",
+    "difficulty": 2,
+    "category": "Furniture",
+    "correctWords": ["chair", "table", "couch", "bed", "dresser", "desk", "bookshelf", "nightstand"],
+    "distractors": ["fork", "shoe", "flower", "dog"]
+  },
+  {
+    "id": "cat-weather-1",
+    "type": "category-naming",
+    "theme": "social",
+    "difficulty": 2,
+    "category": "Weather Words",
+    "correctWords": ["rain", "snow", "wind", "sunny", "cloudy", "storm", "fog", "lightning"],
+    "distractors": ["table", "shoe", "car", "dog"]
+  },
+  {
+    "id": "cat-office-1",
+    "type": "category-naming",
+    "theme": "work",
+    "difficulty": 2,
+    "category": "Office Supplies",
+    "correctWords": ["pen", "paper", "stapler", "folder", "computer", "phone", "printer", "desk"],
+    "distractors": ["banana", "pillow", "shoe", "tree"]
+  },
+  {
+    "id": "cat-restaurant-1",
+    "type": "category-naming",
+    "theme": "food",
+    "difficulty": 2,
+    "category": "Things at a Restaurant",
+    "correctWords": ["menu", "waiter", "plate", "glass", "napkin", "bill", "table", "chair"],
+    "distractors": ["hammer", "pillow", "tree", "car"]
+  },
+  {
+    "id": "cat-hospital-1",
+    "type": "category-naming",
+    "theme": "health",
+    "difficulty": 3,
+    "category": "Things at a Hospital",
+    "correctWords": ["doctor", "nurse", "bed", "medicine", "bandage", "thermometer", "wheelchair", "stethoscope"],
+    "distractors": ["hammer", "football", "cake", "guitar"]
+  }
+]
