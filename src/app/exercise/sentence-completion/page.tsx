@@ -129,6 +129,7 @@ export default function SentenceCompletionPage() {
       totalItems={items.length}
       timerStart={itemStart.current}
       timerRunning={phase !== 'feedback'}
+      currentScore={calculateSessionPoints(results)}
     >
       <div className="text-center mb-8">
         <p className="text-xl leading-relaxed text-text">
@@ -152,15 +153,23 @@ export default function SentenceCompletionPage() {
       {phase !== 'feedback' && (
         <>
           <div className="grid grid-cols-2 gap-3 mb-6">
-            {choices.map((choice) => (
-              <button
-                key={choice}
-                onClick={() => handleSelect(choice)}
-                className="bg-white border-2 border-border rounded-xl py-4 px-4 text-center font-medium text-text hover:border-primary/40 hover:bg-primary/5 transition-all duration-200 min-h-[56px] text-lg"
-              >
-                {choice}
-              </button>
-            ))}
+            {choices.map((choice, i) => {
+              const colorStyles = [
+                'bg-primary/8 border-primary/30 hover:bg-primary/15 hover:border-primary/50',
+                'bg-accent/8 border-accent/30 hover:bg-accent/15 hover:border-accent/50',
+                'bg-success/8 border-success/30 hover:bg-success/15 hover:border-success/50',
+                'bg-warning/8 border-warning/30 hover:bg-warning/15 hover:border-warning/50',
+              ];
+              return (
+                <button
+                  key={choice}
+                  onClick={() => handleSelect(choice)}
+                  className={`border-2 rounded-xl py-4 px-4 text-center font-semibold text-text transition-all duration-200 min-h-[56px] text-lg active:scale-95 ${colorStyles[i % 4]}`}
+                >
+                  {choice}
+                </button>
+              );
+            })}
           </div>
           <Button onClick={handleSkip} variant="ghost" size="sm" className="w-full">
             Skip

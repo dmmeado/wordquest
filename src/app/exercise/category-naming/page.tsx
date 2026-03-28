@@ -134,6 +134,7 @@ export default function CategoryNamingPage() {
       totalItems={items.length}
       timerStart={itemStart.current}
       timerRunning={phase === 'play'}
+      currentScore={calculateSessionPoints(results)}
     >
       <div className="text-center mb-6">
         <p className="text-text-light text-sm mb-1">Find all the words that belong to:</p>

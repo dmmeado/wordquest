@@ -11,6 +11,7 @@ interface ExerciseShellProps {
   totalItems: number;
   timerStart: number;
   timerRunning: boolean;
+  currentScore: number;
   children: React.ReactNode;
 }
 
@@ -32,10 +33,12 @@ export default function ExerciseShell({
   totalItems,
   timerStart,
   timerRunning,
+  currentScore,
   children,
 }: ExerciseShellProps) {
   const router = useRouter();
   const [elapsed, setElapsed] = useState(0);
+  const [displayScore, setDisplayScore] = useState(currentScore);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -58,6 +61,26 @@ export default function ExerciseShell({
     setElapsed(0);
   }, [timerStart]);
 
+  // Animate score counting up
+  useEffect(() => {
+    if (currentScore === displayScore) return;
+    const diff = currentScore - displayScore;
+    const steps = Math.min(Math.abs(diff), 15);
+    const stepSize = diff / steps;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      if (step >= steps) {
+        setDisplayScore(currentScore);
+        clearInterval(timer);
+      } else {
+        setDisplayScore((prev) => Math.round(prev + stepSize));
+      }
+    }, 40);
+    return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentScore]);
+
   const timerColor = elapsed < 5000
     ? 'text-success'
     : elapsed < 10000
@@ -66,12 +89,20 @@ export default function ExerciseShell({
         ? 'text-accent'
         : 'text-text-muted';
 
+  const timerBg = elapsed < 5000
+    ? 'bg-success/10'
+    : elapsed < 10000
+      ? 'bg-primary/10'
+      : elapsed < 15000
+        ? 'bg-accent/10'
+        : 'bg-border/30';
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 px-4 pt-4 pb-2 border-b border-border">
+      <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 px-4 pt-4 pb-3 border-b border-border">
         <div className="max-w-lg mx-auto">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center justify-between mb-3">
             <button
               onClick={() => router.push('/dashboard')}
               className="text-text-light hover:text-text p-2 -ml-2 min-h-[48px] min-w-[48px] flex items-center justify-center"
@@ -86,19 +117,41 @@ export default function ExerciseShell({
               {currentIndex + 1}/{totalItems}
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex-1">
-              <ProgressBar value={progress} height="h-2" />
-            </div>
-            <div className={`text-sm font-mono font-medium tabular-nums min-w-[48px] text-right ${timerColor}`}>
-              {formatTime(elapsed)}
+
+          {/* Score bar */}
+          <div className="flex items-center gap-3 mb-3">
+            <div className="flex-1 bg-border/30 rounded-full h-7 relative overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${Math.min((displayScore / Math.max(totalItems * 13, 1)) * 100, 100)}%` }}
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-xs font-bold text-text drop-shadow-sm">
+                  {displayScore} pts
+                </span>
+              </div>
             </div>
           </div>
+
+          <ProgressBar value={progress} height="h-2" />
+        </div>
+      </div>
+
+      {/* Big centered timer */}
+      <div className="flex justify-center pt-4 pb-2">
+        <div className={`${timerBg} rounded-2xl px-6 py-3 inline-flex items-center gap-2`}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={timerColor}>
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span className={`text-3xl font-mono font-bold tabular-nums ${timerColor}`}>
+            {formatTime(elapsed)}
+          </span>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 py-4">
         <div className="max-w-lg w-full animate-fade-in">{children}</div>
       </div>
     </div>

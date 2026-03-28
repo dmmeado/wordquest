@@ -103,6 +103,7 @@ export default function ScriptPracticePage() {
       totalItems={items.length}
       timerStart={itemStart.current}
       timerRunning={phase !== 'reveal' && phase !== 'rate'}
+      currentScore={calculateSessionPoints(results)}
     >
       <div className="text-center mb-4">
         <span className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">

@@ -119,6 +119,7 @@ export default function ResponsiveNamingPage() {
       totalItems={items.length}
       timerStart={itemStart.current}
       timerRunning={phase !== 'feedback'}
+      currentScore={calculateSessionPoints(results)}
     >
       <div className="text-center mb-6">
         <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -132,6 +132,7 @@ export default function PictureNamingPage() {
       totalItems={items.length}
       timerStart={itemStart.current}
       timerRunning={phase !== 'feedback'}
+      currentScore={calculateSessionPoints(results)}
     >
       {/* Picture display */}
       <div className="text-center mb-6">
