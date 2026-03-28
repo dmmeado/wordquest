@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { useAppStore } from '@/lib/store';
-import { scripts } from '@/lib/content';
+import { scripts, excludeSeenToday } from '@/lib/content';
 import { calculateSessionPoints } from '@/lib/scoring';
 import type { ExerciseResult, SessionRecord, ScriptPracticeItem } from '@/types';
 import ExerciseShell from '@/components/exercise/ExerciseShell';
@@ -22,10 +22,14 @@ function shuffle<T>(arr: T[]): T[] {
 type ScriptPhase = 'read' | 'wait' | 'recall' | 'reveal' | 'rate' | 'summary';
 
 export default function ScriptPracticePage() {
-  const { addSession, streak, profile } = useAppStore();
+  const { addSession, streak, profile, getTodaySeenIds } = useAppStore();
   const sessionStart = useRef(Date.now());
 
-  const items = useMemo(() => shuffle(scripts).slice(0, 8), []);
+  const items = useMemo(() => {
+    const seen = getTodaySeenIds('script-practice');
+    return excludeSeenToday(scripts, seen, 8).slice(0, 8);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<ScriptPhase>('read');
   const [results, setResults] = useState<ExerciseResult[]>([]);

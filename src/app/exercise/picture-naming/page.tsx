@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef } from 'react';
 import { useAppStore } from '@/lib/store';
-import { pictures } from '@/lib/content';
+import { pictures, excludeSeenToday } from '@/lib/content';
 import { calculateSessionPoints, calculateTimeBonus, calculatePoints, getEncouragingMessage } from '@/lib/scoring';
 import type { ExerciseResult, SessionRecord, CueLevel } from '@/types';
 import ExerciseShell from '@/components/exercise/ExerciseShell';
@@ -22,10 +22,14 @@ function shuffle<T>(arr: T[]): T[] {
 const CUE_LABELS = ['', 'Semantic Cue', 'Function Cue', 'First Letter', 'Choose One'];
 
 export default function PictureNamingPage() {
-  const { addSession, streak, profile } = useAppStore();
+  const { addSession, streak, profile, getTodaySeenIds } = useAppStore();
   const sessionStart = useRef(Date.now());
 
-  const items = useMemo(() => shuffle(pictures).slice(0, 10), []);
+  const items = useMemo(() => {
+    const seen = getTodaySeenIds('picture-naming');
+    return excludeSeenToday(pictures, seen, 10).slice(0, 10);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<'prompt' | 'input' | 'cue' | 'forced' | 'feedback' | 'summary'>('prompt');
   const [cueLevel, setCueLevel] = useState<CueLevel>(0);

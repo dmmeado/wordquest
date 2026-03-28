@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef } from 'react';
 import { useAppStore } from '@/lib/store';
-import { responsivePrompts } from '@/lib/content';
+import { responsivePrompts, excludeSeenToday } from '@/lib/content';
 import { calculateSessionPoints, calculateTimeBonus, calculatePoints, getEncouragingMessage } from '@/lib/scoring';
 import type { ExerciseResult, SessionRecord, CueLevel, ResponsiveNamingItem } from '@/types';
 import ExerciseShell from '@/components/exercise/ExerciseShell';
@@ -20,10 +20,14 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function ResponsiveNamingPage() {
-  const { addSession, streak, profile } = useAppStore();
+  const { addSession, streak, profile, getTodaySeenIds } = useAppStore();
   const sessionStart = useRef(Date.now());
 
-  const items = useMemo(() => shuffle(responsivePrompts).slice(0, 10), []);
+  const items = useMemo(() => {
+    const seen = getTodaySeenIds('responsive-naming');
+    return excludeSeenToday(responsivePrompts, seen, 10).slice(0, 10);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<'prompt' | 'cue1' | 'cue2' | 'choices' | 'feedback' | 'summary'>('prompt');
   const [cueLevel, setCueLevel] = useState<CueLevel>(0);

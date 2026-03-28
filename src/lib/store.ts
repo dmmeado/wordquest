@@ -75,6 +75,9 @@ interface AppState {
   // Caregiver mode
   caregiverMode: boolean;
   setCaregiverMode: (v: boolean) => void;
+
+  // Helpers
+  getTodaySeenIds: (exerciseType?: ExerciseType) => Set<string>;
 }
 
 export const useAppStore = create<AppState>()(
@@ -296,6 +299,19 @@ export const useAppStore = create<AppState>()(
 
       caregiverMode: false,
       setCaregiverMode: (v) => set({ caregiverMode: v }),
+
+      getTodaySeenIds: (exerciseType?) => {
+        const today = new Date().toDateString();
+        const ids = new Set<string>();
+        for (const session of get().sessions) {
+          if (new Date(session.startedAt).toDateString() !== today) continue;
+          if (exerciseType && session.exerciseType !== exerciseType) continue;
+          for (const r of session.results) {
+            ids.add(r.itemId);
+          }
+        }
+        return ids;
+      },
     }),
     {
       name: 'wordquest-storage',

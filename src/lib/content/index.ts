@@ -68,6 +68,23 @@ export function getQuickWinItems(themes?: string[]): AnyExerciseItem[] {
   return shuffleArray(items).slice(0, 5);
 }
 
+/**
+ * Filter out items already seen today, then shuffle.
+ * Falls back to full pool (shuffled) if too few unseen items remain.
+ */
+export function excludeSeenToday<T extends { id: string }>(
+  items: T[],
+  todaySeenIds: Set<string>,
+  minRequired: number,
+): T[] {
+  const unseen = items.filter((item) => !todaySeenIds.has(item.id));
+  // If enough unseen items, use those; otherwise fall back to full pool
+  if (unseen.length >= minRequired) {
+    return shuffleArray(unseen);
+  }
+  return shuffleArray(items);
+}
+
 function shuffleArray<T>(arr: T[]): T[] {
   const shuffled = [...arr];
   for (let i = shuffled.length - 1; i > 0; i--) {

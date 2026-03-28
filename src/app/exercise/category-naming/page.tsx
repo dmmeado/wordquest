@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useRef } from 'react';
-import { categories } from '@/lib/content';
+import { categories, excludeSeenToday } from '@/lib/content';
 import { useAppStore } from '@/lib/store';
 import { calculateSessionPoints, calculateTimeBonus, calculatePoints, getEncouragingMessage } from '@/lib/scoring';
 import type { ExerciseResult, SessionRecord } from '@/types';
@@ -20,10 +20,14 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function CategoryNamingPage() {
-  const { addSession, streak, profile } = useAppStore();
+  const { addSession, streak, profile, getTodaySeenIds } = useAppStore();
   const sessionStart = useRef(Date.now());
 
-  const items = useMemo(() => shuffle(categories).slice(0, 8), []);
+  const items = useMemo(() => {
+    const seen = getTodaySeenIds('category-naming');
+    return excludeSeenToday(categories, seen, 8).slice(0, 8);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [phase, setPhase] = useState<'play' | 'feedback' | 'summary'>('play');
