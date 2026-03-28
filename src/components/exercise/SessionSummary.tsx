@@ -23,6 +23,16 @@ export default function SessionSummary({ results, streakCount, userGoal }: Sessi
   const recovered = results.filter((r) => r.correct && r.cueLevel > 0).length;
   const total = results.length;
 
+  // Average time per answer (exclude skipped)
+  const answeredResults = results.filter((r) => !r.skipped);
+  const avgTimeMs = answeredResults.length > 0
+    ? answeredResults.reduce((sum, r) => sum + r.timeMs, 0) / answeredResults.length
+    : 0;
+  const avgTimeSec = avgTimeMs / 1000;
+  const avgTimeDisplay = avgTimeSec >= 60
+    ? `${Math.floor(avgTimeSec / 60)}:${String(Math.round(avgTimeSec % 60)).padStart(2, '0')}`
+    : `${avgTimeSec.toFixed(1)}s`;
+
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-8">
       <CelebrationEffect type="celebration" trigger={triggerRef.current} />
@@ -39,7 +49,7 @@ export default function SessionSummary({ results, streakCount, userGoal }: Sessi
         </div>
 
         <Card className="mb-4">
-          <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-2 gap-4 text-center">
             <div className="animate-count-up" style={{ animationDelay: '0.2s' }}>
               <div className="text-3xl font-bold text-primary">{totalPoints}</div>
               <div className="text-xs text-text-muted mt-1">Points Earned</div>
@@ -52,6 +62,18 @@ export default function SessionSummary({ results, streakCount, userGoal }: Sessi
               <div className="text-3xl font-bold text-accent">{streakCount}</div>
               <div className="text-xs text-text-muted mt-1">Day Streak</div>
             </div>
+            {answeredResults.length > 0 && (
+              <div className="animate-count-up" style={{ animationDelay: '0.8s' }}>
+                <div className="flex items-center justify-center gap-1">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warning">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  <span className="text-3xl font-bold text-warning">{avgTimeDisplay}</span>
+                </div>
+                <div className="text-xs text-text-muted mt-1">Avg per Answer</div>
+              </div>
+            )}
           </div>
         </Card>
 

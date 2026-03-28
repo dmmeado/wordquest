@@ -249,7 +249,12 @@ export const useAppStore = create<AppState>()(
       refreshMissions: () =>
         set((state) => {
           const themes = state.profile?.themes || ['home'];
-          const mission = generateDailyMission(themes);
+          const todayMissionId = `mission-${localTodayStr()}`;
+          // Preserve existing mission if it's for today (don't reset progress)
+          const mission =
+            state.dailyMission && state.dailyMission.id === todayMissionId
+              ? state.dailyMission
+              : generateDailyMission(themes);
           const wkDays = thisWeekDates(state.streak.weeklyDays).length;
           return {
             dailyMission: mission,

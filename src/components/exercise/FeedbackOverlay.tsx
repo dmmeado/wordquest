@@ -74,7 +74,7 @@ export default function FeedbackOverlay({
             </div>
             {timeBonus > 0 && (
               <div className="animate-points text-success font-semibold text-sm mt-1">
-                +{timeBonus} speed bonus
+                (includes +{timeBonus} speed bonus!)
               </div>
             )}
           </div>

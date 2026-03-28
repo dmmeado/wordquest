@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import HydrationGuard from '@/components/ui/HydrationGuard';
 
 const THEMES = [
   { id: 'home', label: 'Home', icon: '🏠' },
@@ -17,6 +18,14 @@ const THEMES = [
 ];
 
 export default function SettingsPage() {
+  return (
+    <HydrationGuard>
+      <SettingsContent />
+    </HydrationGuard>
+  );
+}
+
+function SettingsContent() {
   const router = useRouter();
   const { profile, updateProfile, customWords, addCustomWord, removeCustomWord, caregiverMode, setCaregiverMode } = useAppStore();
   const [newWord, setNewWord] = useState('');

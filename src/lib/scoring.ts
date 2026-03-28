@@ -32,7 +32,9 @@ export function calculatePoints(result: ExerciseResult): number {
 
 export function calculateSessionPoints(results: ExerciseResult[]): number {
   const itemPoints = results.reduce((sum, r) => sum + calculatePoints(r), 0);
-  const completionBonus = results.filter((r) => !r.skipped).length >= 3 ? COMPLETION_BONUS * 2 : COMPLETION_BONUS;
+  const nonSkipped = results.filter((r) => !r.skipped).length;
+  if (nonSkipped === 0) return 0; // no bonus for all-skipped sessions
+  const completionBonus = nonSkipped >= 3 ? COMPLETION_BONUS * 2 : COMPLETION_BONUS;
   return itemPoints + completionBonus;
 }
 

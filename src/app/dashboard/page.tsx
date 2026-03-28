@@ -131,7 +131,7 @@ function DashboardContent() {
               {dailyMission.completed && <Badge variant="success">Done!</Badge>}
             </div>
             <ProgressBar
-              value={(dailyMission.completedCount / dailyMission.targetCount) * 100}
+              value={dailyMission.targetCount > 0 ? (dailyMission.completedCount / dailyMission.targetCount) * 100 : 0}
               height="h-2"
               color="bg-accent"
             />
@@ -161,7 +161,7 @@ function DashboardContent() {
             </span>
           </div>
           <ProgressBar
-            value={(weeklyChallenge.completedDays / weeklyChallenge.targetDays) * 100}
+            value={weeklyChallenge.targetDays > 0 ? (weeklyChallenge.completedDays / weeklyChallenge.targetDays) * 100 : 0}
             height="h-2"
             color="bg-success"
           />

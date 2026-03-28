@@ -5,8 +5,17 @@ import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import HydrationGuard from '@/components/ui/HydrationGuard';
 
 export default function ReviewPage() {
+  return (
+    <HydrationGuard>
+      <ReviewContent />
+    </HydrationGuard>
+  );
+}
+
+function ReviewContent() {
   const router = useRouter();
   const { sessions } = useAppStore();
 

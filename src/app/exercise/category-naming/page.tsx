@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useMemo, useRef } from 'react';
 import { categories } from '@/lib/content';
 import { useAppStore } from '@/lib/store';
-import { calculateSessionPoints, calculateTimeBonus } from '@/lib/scoring';
+import { calculateSessionPoints, calculateTimeBonus, calculatePoints, getEncouragingMessage } from '@/lib/scoring';
 import type { ExerciseResult, SessionRecord } from '@/types';
 import ExerciseShell from '@/components/exercise/ExerciseShell';
 import FeedbackOverlay from '@/components/exercise/FeedbackOverlay';
@@ -21,7 +20,6 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function CategoryNamingPage() {
-  const router = useRouter();
   const { addSession, streak, profile } = useAppStore();
   const sessionStart = useRef(Date.now());
 
@@ -71,14 +69,9 @@ export default function CategoryNamingPage() {
       skipped: false,
     };
 
-    const timeMs = Date.now() - itemStart.current;
-    const timeBonus = isCorrect ? calculateTimeBonus(timeMs) : 0;
-    const points = (isCorrect ? 10 : selected.size > 0 ? 1 : 0) + timeBonus;
-    const message = isCorrect
-      ? selectedCorrect === correctSet.size
-        ? 'Perfect! You got them all!'
-        : 'Nice work! You found most of them.'
-      : 'Good try! Let\'s see the answers.';
+    const points = calculatePoints(result);
+    const timeBonus = isCorrect ? calculateTimeBonus(result.timeMs) : 0;
+    const message = getEncouragingMessage(result);
 
     setResults((prev) => {
       const updated = [...prev, result];
