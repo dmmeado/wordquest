@@ -1,32 +1,1402 @@
 [
-  {"id":"sent-1","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You eat soup with a ___.","answer":"spoon","distractors":["fork","knife","plate"],"firstLetterCue":"sp"},
-  {"id":"sent-2","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You unlock the door with a ___.","answer":"key","distractors":["handle","button","lock"],"firstLetterCue":"k"},
-  {"id":"sent-3","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You sleep in a ___.","answer":"bed","distractors":["chair","couch","floor"],"firstLetterCue":"b"},
-  {"id":"sent-4","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You wash your hands with ___.","answer":"soap","distractors":["towel","water","cloth"],"firstLetterCue":"so"},
-  {"id":"sent-5","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You drink coffee from a ___.","answer":"cup","distractors":["plate","bowl","pot"],"firstLetterCue":"c"},
-  {"id":"sent-6","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You turn on the ___ to see in the dark.","answer":"light","distractors":["door","window","fan"],"firstLetterCue":"l"},
-  {"id":"sent-7","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You keep food cold in the ___.","answer":"fridge","distractors":["oven","sink","cabinet"],"firstLetterCue":"fr"},
-  {"id":"sent-8","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You dry off after a shower with a ___.","answer":"towel","distractors":["blanket","shirt","napkin"],"firstLetterCue":"t"},
-  {"id":"sent-9","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You cut food with a ___.","answer":"knife","distractors":["spoon","fork","plate"],"firstLetterCue":"kn"},
-  {"id":"sent-10","type":"sentence-completion","theme":"travel","difficulty":1,"sentence":"You drive a ___ to get to work.","answer":"car","distractors":["bus","train","plane"],"firstLetterCue":"c"},
-  {"id":"sent-11","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You bake a cake in the ___.","answer":"oven","distractors":["fridge","sink","microwave"],"firstLetterCue":"o"},
-  {"id":"sent-12","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You sit on a ___ to watch TV.","answer":"couch","distractors":["table","desk","bed"],"firstLetterCue":"co"},
-  {"id":"sent-13","type":"sentence-completion","theme":"sports","difficulty":2,"sentence":"You hit a baseball with a ___.","answer":"bat","distractors":["glove","ball","net"],"firstLetterCue":"b"},
-  {"id":"sent-14","type":"sentence-completion","theme":"health","difficulty":2,"sentence":"The doctor checks your heart with a ___.","answer":"stethoscope","distractors":["thermometer","bandage","needle"],"firstLetterCue":"st"},
-  {"id":"sent-15","type":"sentence-completion","theme":"work","difficulty":2,"sentence":"You write a letter with a ___.","answer":"pen","distractors":["pencil","marker","crayon"],"firstLetterCue":"p"},
-  {"id":"sent-16","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You spread butter on ___.","answer":"bread","distractors":["rice","soup","salad"],"firstLetterCue":"br"},
-  {"id":"sent-17","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You brush your teeth with a ___.","answer":"toothbrush","distractors":["comb","towel","sponge"],"firstLetterCue":"to"},
-  {"id":"sent-18","type":"sentence-completion","theme":"travel","difficulty":2,"sentence":"You wait for the airplane at the ___.","answer":"airport","distractors":["station","dock","hotel"],"firstLetterCue":"ai"},
-  {"id":"sent-19","type":"sentence-completion","theme":"social","difficulty":2,"sentence":"You call someone on the ___.","answer":"phone","distractors":["radio","TV","computer"],"firstLetterCue":"ph"},
-  {"id":"sent-20","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You look at yourself in the ___.","answer":"mirror","distractors":["window","screen","painting"],"firstLetterCue":"mi"},
-  {"id":"sent-21","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You pour cereal into a ___.","answer":"bowl","distractors":["cup","plate","pan"],"firstLetterCue":"bo"},
-  {"id":"sent-22","type":"sentence-completion","theme":"health","difficulty":2,"sentence":"You take ___ when you are sick.","answer":"medicine","distractors":["food","water","vitamins"],"firstLetterCue":"me"},
-  {"id":"sent-23","type":"sentence-completion","theme":"home","difficulty":1,"sentence":"You hang your coat on a ___.","answer":"hook","distractors":["shelf","table","chair"],"firstLetterCue":"h"},
-  {"id":"sent-24","type":"sentence-completion","theme":"social","difficulty":2,"sentence":"You send a letter in the ___.","answer":"mail","distractors":["box","bag","truck"],"firstLetterCue":"ma"},
-  {"id":"sent-25","type":"sentence-completion","theme":"sports","difficulty":2,"sentence":"You kick a ___ in soccer.","answer":"ball","distractors":["net","cone","shoe"],"firstLetterCue":"b"},
-  {"id":"sent-26","type":"sentence-completion","theme":"travel","difficulty":2,"sentence":"You check into a ___ when traveling.","answer":"hotel","distractors":["office","store","bank"],"firstLetterCue":"h"},
-  {"id":"sent-27","type":"sentence-completion","theme":"work","difficulty":2,"sentence":"You type on a ___ at work.","answer":"keyboard","distractors":["phone","tablet","mouse"],"firstLetterCue":"k"},
-  {"id":"sent-28","type":"sentence-completion","theme":"food","difficulty":1,"sentence":"You peel a ___ before eating it.","answer":"banana","distractors":["apple","grape","berry"],"firstLetterCue":"ba"},
-  {"id":"sent-29","type":"sentence-completion","theme":"home","difficulty":2,"sentence":"You water the ___ in the garden.","answer":"plants","distractors":["rocks","fence","deck"],"firstLetterCue":"pl"},
-  {"id":"sent-30","type":"sentence-completion","theme":"health","difficulty":2,"sentence":"You check your temperature with a ___.","answer":"thermometer","distractors":["stethoscope","scale","bandage"],"firstLetterCue":"th"}
+  {
+    "id": "sent-1",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You eat soup with a ___.",
+    "answer": "spoon",
+    "distractors": [
+      "fork",
+      "knife",
+      "plate"
+    ],
+    "firstLetterCue": "sp"
+  },
+  {
+    "id": "sent-2",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You unlock the door with a ___.",
+    "answer": "key",
+    "distractors": [
+      "handle",
+      "button",
+      "lock"
+    ],
+    "firstLetterCue": "k"
+  },
+  {
+    "id": "sent-3",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You sleep in a ___.",
+    "answer": "bed",
+    "distractors": [
+      "chair",
+      "couch",
+      "floor"
+    ],
+    "firstLetterCue": "b"
+  },
+  {
+    "id": "sent-4",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You wash your hands with ___.",
+    "answer": "soap",
+    "distractors": [
+      "towel",
+      "water",
+      "cloth"
+    ],
+    "firstLetterCue": "so"
+  },
+  {
+    "id": "sent-5",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You drink coffee from a ___.",
+    "answer": "cup",
+    "distractors": [
+      "plate",
+      "bowl",
+      "pot"
+    ],
+    "firstLetterCue": "c"
+  },
+  {
+    "id": "sent-6",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You turn on the ___ to see in the dark.",
+    "answer": "light",
+    "distractors": [
+      "door",
+      "window",
+      "fan"
+    ],
+    "firstLetterCue": "l"
+  },
+  {
+    "id": "sent-7",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You keep food cold in the ___.",
+    "answer": "fridge",
+    "distractors": [
+      "oven",
+      "sink",
+      "cabinet"
+    ],
+    "firstLetterCue": "fr"
+  },
+  {
+    "id": "sent-8",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You dry off after a shower with a ___.",
+    "answer": "towel",
+    "distractors": [
+      "blanket",
+      "shirt",
+      "napkin"
+    ],
+    "firstLetterCue": "t"
+  },
+  {
+    "id": "sent-9",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You cut food with a ___.",
+    "answer": "knife",
+    "distractors": [
+      "spoon",
+      "fork",
+      "plate"
+    ],
+    "firstLetterCue": "kn"
+  },
+  {
+    "id": "sent-10",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 1,
+    "sentence": "You drive a ___ to get to work.",
+    "answer": "car",
+    "distractors": [
+      "bus",
+      "train",
+      "plane"
+    ],
+    "firstLetterCue": "c"
+  },
+  {
+    "id": "sent-11",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You bake a cake in the ___.",
+    "answer": "oven",
+    "distractors": [
+      "fridge",
+      "sink",
+      "microwave"
+    ],
+    "firstLetterCue": "o"
+  },
+  {
+    "id": "sent-12",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You sit on a ___ to watch TV.",
+    "answer": "couch",
+    "distractors": [
+      "table",
+      "desk",
+      "bed"
+    ],
+    "firstLetterCue": "co"
+  },
+  {
+    "id": "sent-13",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "You hit a baseball with a ___.",
+    "answer": "bat",
+    "distractors": [
+      "glove",
+      "ball",
+      "net"
+    ],
+    "firstLetterCue": "b"
+  },
+  {
+    "id": "sent-14",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "The doctor checks your heart with a ___.",
+    "answer": "stethoscope",
+    "distractors": [
+      "thermometer",
+      "bandage",
+      "needle"
+    ],
+    "firstLetterCue": "st"
+  },
+  {
+    "id": "sent-15",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 2,
+    "sentence": "You write a letter with a ___.",
+    "answer": "pen",
+    "distractors": [
+      "pencil",
+      "marker",
+      "crayon"
+    ],
+    "firstLetterCue": "p"
+  },
+  {
+    "id": "sent-16",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You spread butter on ___.",
+    "answer": "bread",
+    "distractors": [
+      "rice",
+      "soup",
+      "salad"
+    ],
+    "firstLetterCue": "br"
+  },
+  {
+    "id": "sent-17",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You brush your teeth with a ___.",
+    "answer": "toothbrush",
+    "distractors": [
+      "comb",
+      "towel",
+      "sponge"
+    ],
+    "firstLetterCue": "to"
+  },
+  {
+    "id": "sent-18",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 2,
+    "sentence": "You wait for the airplane at the ___.",
+    "answer": "airport",
+    "distractors": [
+      "station",
+      "dock",
+      "hotel"
+    ],
+    "firstLetterCue": "ai"
+  },
+  {
+    "id": "sent-19",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "You call someone on the ___.",
+    "answer": "phone",
+    "distractors": [
+      "radio",
+      "TV",
+      "computer"
+    ],
+    "firstLetterCue": "ph"
+  },
+  {
+    "id": "sent-20",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You look at yourself in the ___.",
+    "answer": "mirror",
+    "distractors": [
+      "window",
+      "screen",
+      "painting"
+    ],
+    "firstLetterCue": "mi"
+  },
+  {
+    "id": "sent-21",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You pour cereal into a ___.",
+    "answer": "bowl",
+    "distractors": [
+      "cup",
+      "plate",
+      "pan"
+    ],
+    "firstLetterCue": "bo"
+  },
+  {
+    "id": "sent-22",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "You take ___ when you are sick.",
+    "answer": "medicine",
+    "distractors": [
+      "food",
+      "water",
+      "vitamins"
+    ],
+    "firstLetterCue": "me"
+  },
+  {
+    "id": "sent-23",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You hang your coat on a ___.",
+    "answer": "hook",
+    "distractors": [
+      "shelf",
+      "table",
+      "chair"
+    ],
+    "firstLetterCue": "h"
+  },
+  {
+    "id": "sent-24",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "You send a letter in the ___.",
+    "answer": "mail",
+    "distractors": [
+      "box",
+      "bag",
+      "truck"
+    ],
+    "firstLetterCue": "ma"
+  },
+  {
+    "id": "sent-25",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "You kick a ___ in soccer.",
+    "answer": "ball",
+    "distractors": [
+      "net",
+      "cone",
+      "shoe"
+    ],
+    "firstLetterCue": "b"
+  },
+  {
+    "id": "sent-26",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 2,
+    "sentence": "You check into a ___ when traveling.",
+    "answer": "hotel",
+    "distractors": [
+      "office",
+      "store",
+      "bank"
+    ],
+    "firstLetterCue": "h"
+  },
+  {
+    "id": "sent-27",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 2,
+    "sentence": "You type on a ___ at work.",
+    "answer": "keyboard",
+    "distractors": [
+      "phone",
+      "tablet",
+      "mouse"
+    ],
+    "firstLetterCue": "k"
+  },
+  {
+    "id": "sent-28",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You peel a ___ before eating it.",
+    "answer": "banana",
+    "distractors": [
+      "apple",
+      "grape",
+      "berry"
+    ],
+    "firstLetterCue": "ba"
+  },
+  {
+    "id": "sent-29",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 2,
+    "sentence": "You water the ___ in the garden.",
+    "answer": "plants",
+    "distractors": [
+      "rocks",
+      "fence",
+      "deck"
+    ],
+    "firstLetterCue": "pl"
+  },
+  {
+    "id": "sent-30",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "You check your temperature with a ___.",
+    "answer": "thermometer",
+    "distractors": [
+      "stethoscope",
+      "scale",
+      "bandage"
+    ],
+    "firstLetterCue": "th"
+  },
+  {
+    "id": "sent-31",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You sit on a ___ at the dining table.",
+    "answer": "chair",
+    "distractors": [
+      "stool",
+      "bench",
+      "sofa"
+    ],
+    "firstLetterCue": "ch"
+  },
+  {
+    "id": "sent-32",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You open the ___ to enter a room.",
+    "answer": "door",
+    "distractors": [
+      "gate",
+      "window",
+      "curtain"
+    ],
+    "firstLetterCue": "do"
+  },
+  {
+    "id": "sent-33",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You look out through the ___ to see the yard.",
+    "answer": "window",
+    "distractors": [
+      "door",
+      "screen",
+      "wall"
+    ],
+    "firstLetterCue": "wi"
+  },
+  {
+    "id": "sent-34",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 2,
+    "sentence": "You vacuum the ___ to clean the floor.",
+    "answer": "carpet",
+    "distractors": [
+      "tile",
+      "rug",
+      "mat"
+    ],
+    "firstLetterCue": "ca"
+  },
+  {
+    "id": "sent-35",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 2,
+    "sentence": "You turn the ___ to lock the front door.",
+    "answer": "deadbolt",
+    "distractors": [
+      "handle",
+      "knob",
+      "chain"
+    ],
+    "firstLetterCue": "de"
+  },
+  {
+    "id": "sent-36",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 2,
+    "sentence": "You pull clothes out of the ___ after they are dry.",
+    "answer": "dryer",
+    "distractors": [
+      "washer",
+      "hamper",
+      "basket"
+    ],
+    "firstLetterCue": "dr"
+  },
+  {
+    "id": "sent-37",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 3,
+    "sentence": "You store out-of-season clothes in the ___ above the garage.",
+    "answer": "attic",
+    "distractors": [
+      "basement",
+      "closet",
+      "shed"
+    ],
+    "firstLetterCue": "at"
+  },
+  {
+    "id": "sent-38",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 3,
+    "sentence": "You use a ___ to drain water from pasta.",
+    "answer": "colander",
+    "distractors": [
+      "strainer",
+      "funnel",
+      "sieve"
+    ],
+    "firstLetterCue": "co"
+  },
+  {
+    "id": "sent-39",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 1,
+    "sentence": "You rest your head on a ___ when you sleep.",
+    "answer": "pillow",
+    "distractors": [
+      "blanket",
+      "cushion",
+      "sheet"
+    ],
+    "firstLetterCue": "pi"
+  },
+  {
+    "id": "sent-40",
+    "type": "sentence-completion",
+    "theme": "home",
+    "difficulty": 3,
+    "sentence": "The front porch is shaded by a fabric ___.",
+    "answer": "awning",
+    "distractors": [
+      "canopy",
+      "umbrella",
+      "tarp"
+    ],
+    "firstLetterCue": "aw"
+  },
+  {
+    "id": "sent-41",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You spread butter on a piece of ___.",
+    "answer": "toast",
+    "distractors": [
+      "muffin",
+      "bagel",
+      "cracker"
+    ],
+    "firstLetterCue": "to"
+  },
+  {
+    "id": "sent-42",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You peel an ___ before eating it.",
+    "answer": "orange",
+    "distractors": [
+      "apple",
+      "peach",
+      "mango"
+    ],
+    "firstLetterCue": "or"
+  },
+  {
+    "id": "sent-43",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You pour ___ over your cereal in the morning.",
+    "answer": "milk",
+    "distractors": [
+      "juice",
+      "water",
+      "cream"
+    ],
+    "firstLetterCue": "mi"
+  },
+  {
+    "id": "sent-44",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 1,
+    "sentence": "You crack open an ___ to make breakfast.",
+    "answer": "egg",
+    "distractors": [
+      "walnut",
+      "coconut",
+      "avocado"
+    ],
+    "firstLetterCue": "eg"
+  },
+  {
+    "id": "sent-45",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 2,
+    "sentence": "You squeeze a ___ to add juice to your water.",
+    "answer": "lemon",
+    "distractors": [
+      "lime",
+      "orange",
+      "grapefruit"
+    ],
+    "firstLetterCue": "le"
+  },
+  {
+    "id": "sent-46",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 2,
+    "sentence": "You grate ___ on top of the pasta.",
+    "answer": "cheese",
+    "distractors": [
+      "garlic",
+      "pepper",
+      "nutmeg"
+    ],
+    "firstLetterCue": "ch"
+  },
+  {
+    "id": "sent-47",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 2,
+    "sentence": "You use a ___ to flip pancakes on the stove.",
+    "answer": "spatula",
+    "distractors": [
+      "ladle",
+      "tongs",
+      "whisk"
+    ],
+    "firstLetterCue": "sp"
+  },
+  {
+    "id": "sent-48",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 3,
+    "sentence": "You use a ___ to mash potatoes until smooth.",
+    "answer": "masher",
+    "distractors": [
+      "roller",
+      "grater",
+      "press"
+    ],
+    "firstLetterCue": "ma"
+  },
+  {
+    "id": "sent-49",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 3,
+    "sentence": "The waiter brings the ___ so you can choose what to eat.",
+    "answer": "menu",
+    "distractors": [
+      "check",
+      "tray",
+      "plate"
+    ],
+    "firstLetterCue": "me"
+  },
+  {
+    "id": "sent-50",
+    "type": "sentence-completion",
+    "theme": "food",
+    "difficulty": 2,
+    "sentence": "You store leftovers in a ___ in the fridge.",
+    "answer": "container",
+    "distractors": [
+      "wrapper",
+      "bag",
+      "carton"
+    ],
+    "firstLetterCue": "co"
+  },
+  {
+    "id": "sent-51",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 1,
+    "sentence": "You pull your ___ through the airport terminal.",
+    "answer": "suitcase",
+    "distractors": [
+      "backpack",
+      "purse",
+      "briefcase"
+    ],
+    "firstLetterCue": "su"
+  },
+  {
+    "id": "sent-52",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 1,
+    "sentence": "You show your ___ to the agent before boarding the plane.",
+    "answer": "ticket",
+    "distractors": [
+      "wallet",
+      "badge",
+      "receipt"
+    ],
+    "firstLetterCue": "ti"
+  },
+  {
+    "id": "sent-53",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 1,
+    "sentence": "You look at a ___ to find which road to take.",
+    "answer": "map",
+    "distractors": [
+      "sign",
+      "guide",
+      "compass"
+    ],
+    "firstLetterCue": "ma"
+  },
+  {
+    "id": "sent-54",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 2,
+    "sentence": "You check in at the front ___ of the hotel.",
+    "answer": "desk",
+    "distractors": [
+      "counter",
+      "lobby",
+      "lounge"
+    ],
+    "firstLetterCue": "de"
+  },
+  {
+    "id": "sent-55",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 2,
+    "sentence": "You hand your ___ to the border officer for identification.",
+    "answer": "passport",
+    "distractors": [
+      "license",
+      "visa",
+      "permit"
+    ],
+    "firstLetterCue": "pa"
+  },
+  {
+    "id": "sent-56",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 2,
+    "sentence": "You wait on the ___ for the train to arrive.",
+    "answer": "platform",
+    "distractors": [
+      "sidewalk",
+      "terminal",
+      "ramp"
+    ],
+    "firstLetterCue": "pl"
+  },
+  {
+    "id": "sent-57",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 3,
+    "sentence": "You hail a ___ on the street to get a ride downtown.",
+    "answer": "taxi",
+    "distractors": [
+      "shuttle",
+      "bus",
+      "van"
+    ],
+    "firstLetterCue": "ta"
+  },
+  {
+    "id": "sent-58",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 3,
+    "sentence": "The ship docked at the ___ near the waterfront.",
+    "answer": "pier",
+    "distractors": [
+      "harbor",
+      "wharf",
+      "marina"
+    ],
+    "firstLetterCue": "pi"
+  },
+  {
+    "id": "sent-59",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 1,
+    "sentence": "You fasten your ___ before the plane takes off.",
+    "answer": "seatbelt",
+    "distractors": [
+      "harness",
+      "strap",
+      "buckle"
+    ],
+    "firstLetterCue": "se"
+  },
+  {
+    "id": "sent-60",
+    "type": "sentence-completion",
+    "theme": "travel",
+    "difficulty": 3,
+    "sentence": "You exchange money at the currency ___ before your trip.",
+    "answer": "booth",
+    "distractors": [
+      "counter",
+      "window",
+      "office"
+    ],
+    "firstLetterCue": "bo"
+  },
+  {
+    "id": "sent-61",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 1,
+    "sentence": "You score a point by kicking the ball into the ___.",
+    "answer": "goal",
+    "distractors": [
+      "net",
+      "hoop",
+      "basket"
+    ],
+    "firstLetterCue": "go"
+  },
+  {
+    "id": "sent-62",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 1,
+    "sentence": "You wear a ___ to protect your head while biking.",
+    "answer": "helmet",
+    "distractors": [
+      "visor",
+      "cap",
+      "headband"
+    ],
+    "firstLetterCue": "he"
+  },
+  {
+    "id": "sent-63",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 1,
+    "sentence": "You swim laps back and forth in the ___.",
+    "answer": "pool",
+    "distractors": [
+      "lake",
+      "pond",
+      "tank"
+    ],
+    "firstLetterCue": "po"
+  },
+  {
+    "id": "sent-64",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "You swing the ___ to hit the golf ball off the tee.",
+    "answer": "club",
+    "distractors": [
+      "stick",
+      "rod",
+      "mallet"
+    ],
+    "firstLetterCue": "cl"
+  },
+  {
+    "id": "sent-65",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "The runner crossed the finish ___ to win the race.",
+    "answer": "line",
+    "distractors": [
+      "tape",
+      "mark",
+      "post"
+    ],
+    "firstLetterCue": "li"
+  },
+  {
+    "id": "sent-66",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "You tie the laces on your ___ before going for a run.",
+    "answer": "sneakers",
+    "distractors": [
+      "boots",
+      "sandals",
+      "cleats"
+    ],
+    "firstLetterCue": "sn"
+  },
+  {
+    "id": "sent-67",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 3,
+    "sentence": "The referee blew the ___ to stop play.",
+    "answer": "whistle",
+    "distractors": [
+      "horn",
+      "buzzer",
+      "bell"
+    ],
+    "firstLetterCue": "wh"
+  },
+  {
+    "id": "sent-68",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 3,
+    "sentence": "You aim the arrow and release the ___ to shoot.",
+    "answer": "bowstring",
+    "distractors": [
+      "trigger",
+      "lever",
+      "sling"
+    ],
+    "firstLetterCue": "bo"
+  },
+  {
+    "id": "sent-69",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 1,
+    "sentence": "You hit the tennis ball with a ___.",
+    "answer": "racket",
+    "distractors": [
+      "paddle",
+      "stick",
+      "club"
+    ],
+    "firstLetterCue": "ra"
+  },
+  {
+    "id": "sent-70",
+    "type": "sentence-completion",
+    "theme": "sports",
+    "difficulty": 2,
+    "sentence": "The crowd cheered from the ___ during the game.",
+    "answer": "stands",
+    "distractors": [
+      "bleachers",
+      "balcony",
+      "gallery"
+    ],
+    "firstLetterCue": "st"
+  },
+  {
+    "id": "sent-71",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 1,
+    "sentence": "The doctor wrapped a ___ around the wound.",
+    "answer": "bandage",
+    "distractors": [
+      "gauze",
+      "tape",
+      "cloth"
+    ],
+    "firstLetterCue": "ba"
+  },
+  {
+    "id": "sent-72",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 1,
+    "sentence": "You take a ___ when you have a headache.",
+    "answer": "tablet",
+    "distractors": [
+      "capsule",
+      "syrup",
+      "lozenge"
+    ],
+    "firstLetterCue": "ta"
+  },
+  {
+    "id": "sent-73",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 1,
+    "sentence": "The nurse checked my blood pressure using a ___ on my arm.",
+    "answer": "cuff",
+    "distractors": [
+      "band",
+      "strap",
+      "sleeve"
+    ],
+    "firstLetterCue": "cu"
+  },
+  {
+    "id": "sent-74",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "The dentist took an ___ of my teeth to check for cavities.",
+    "answer": "x-ray",
+    "distractors": [
+      "scan",
+      "photo",
+      "image"
+    ],
+    "firstLetterCue": "x-"
+  },
+  {
+    "id": "sent-75",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "You apply ___ to protect your skin from the sun.",
+    "answer": "sunscreen",
+    "distractors": [
+      "lotion",
+      "ointment",
+      "cream"
+    ],
+    "firstLetterCue": "su"
+  },
+  {
+    "id": "sent-76",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "The doctor used a ___ to give the patient a shot.",
+    "answer": "syringe",
+    "distractors": [
+      "needle",
+      "tube",
+      "dropper"
+    ],
+    "firstLetterCue": "sy"
+  },
+  {
+    "id": "sent-77",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 3,
+    "sentence": "The patient walked slowly down the hall using a ___.",
+    "answer": "walker",
+    "distractors": [
+      "cane",
+      "crutch",
+      "wheelchair"
+    ],
+    "firstLetterCue": "wa"
+  },
+  {
+    "id": "sent-78",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 3,
+    "sentence": "The surgeon used a ___ to cut the stitches.",
+    "answer": "scalpel",
+    "distractors": [
+      "scissors",
+      "blade",
+      "clamp"
+    ],
+    "firstLetterCue": "sc"
+  },
+  {
+    "id": "sent-79",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 1,
+    "sentence": "You step on the ___ to check your weight.",
+    "answer": "scale",
+    "distractors": [
+      "mat",
+      "pad",
+      "platform"
+    ],
+    "firstLetterCue": "sc"
+  },
+  {
+    "id": "sent-80",
+    "type": "sentence-completion",
+    "theme": "health",
+    "difficulty": 2,
+    "sentence": "The pharmacist filled my ___ for the new medication.",
+    "answer": "prescription",
+    "distractors": [
+      "order",
+      "bottle",
+      "receipt"
+    ],
+    "firstLetterCue": "pr"
+  },
+  {
+    "id": "sent-81",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 1,
+    "sentence": "You look at the ___ to read your emails.",
+    "answer": "monitor",
+    "distractors": [
+      "keyboard",
+      "mouse",
+      "printer"
+    ],
+    "firstLetterCue": "mo"
+  },
+  {
+    "id": "sent-82",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 1,
+    "sentence": "You print the report using the office ___.",
+    "answer": "printer",
+    "distractors": [
+      "scanner",
+      "copier",
+      "fax"
+    ],
+    "firstLetterCue": "pr"
+  },
+  {
+    "id": "sent-83",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 1,
+    "sentence": "You write your ideas on the ___ during the meeting.",
+    "answer": "whiteboard",
+    "distractors": [
+      "notepad",
+      "clipboard",
+      "screen"
+    ],
+    "firstLetterCue": "wh"
+  },
+  {
+    "id": "sent-84",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 2,
+    "sentence": "You keep your papers organized in a filing ___.",
+    "answer": "cabinet",
+    "distractors": [
+      "folder",
+      "drawer",
+      "binder"
+    ],
+    "firstLetterCue": "ca"
+  },
+  {
+    "id": "sent-85",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 2,
+    "sentence": "You attach pages together with a ___.",
+    "answer": "stapler",
+    "distractors": [
+      "clip",
+      "binder",
+      "clamp"
+    ],
+    "firstLetterCue": "st"
+  },
+  {
+    "id": "sent-86",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 2,
+    "sentence": "You scan your ___ to enter the secure building.",
+    "answer": "badge",
+    "distractors": [
+      "card",
+      "pass",
+      "ticket"
+    ],
+    "firstLetterCue": "ba"
+  },
+  {
+    "id": "sent-87",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 3,
+    "sentence": "The speaker gave a presentation from behind the ___.",
+    "answer": "podium",
+    "distractors": [
+      "lectern",
+      "table",
+      "stand"
+    ],
+    "firstLetterCue": "po"
+  },
+  {
+    "id": "sent-88",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 3,
+    "sentence": "You keep your coffee warm in a ___.",
+    "answer": "mug",
+    "distractors": [
+      "glass",
+      "bottle",
+      "pitcher"
+    ],
+    "firstLetterCue": "mu"
+  },
+  {
+    "id": "sent-89",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 1,
+    "sentence": "You put the letter in an ___ before mailing it.",
+    "answer": "envelope",
+    "distractors": [
+      "folder",
+      "package",
+      "box"
+    ],
+    "firstLetterCue": "en"
+  },
+  {
+    "id": "sent-90",
+    "type": "sentence-completion",
+    "theme": "work",
+    "difficulty": 3,
+    "sentence": "You project the slides onto the ___ for the audience.",
+    "answer": "screen",
+    "distractors": [
+      "wall",
+      "board",
+      "monitor"
+    ],
+    "firstLetterCue": "sc"
+  },
+  {
+    "id": "sent-91",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 1,
+    "sentence": "You blow out the candles on your birthday ___.",
+    "answer": "cake",
+    "distractors": [
+      "pie",
+      "cupcake",
+      "muffin"
+    ],
+    "firstLetterCue": "ca"
+  },
+  {
+    "id": "sent-92",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 1,
+    "sentence": "You send a ___ to wish someone a happy holiday.",
+    "answer": "card",
+    "distractors": [
+      "letter",
+      "note",
+      "gift"
+    ],
+    "firstLetterCue": "ca"
+  },
+  {
+    "id": "sent-93",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 1,
+    "sentence": "You take a ___ to remember the moment with your friends.",
+    "answer": "photo",
+    "distractors": [
+      "video",
+      "selfie",
+      "snapshot"
+    ],
+    "firstLetterCue": "ph"
+  },
+  {
+    "id": "sent-94",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "You wrap the birthday present with colorful ___.",
+    "answer": "paper",
+    "distractors": [
+      "ribbon",
+      "foil",
+      "fabric"
+    ],
+    "firstLetterCue": "pa"
+  },
+  {
+    "id": "sent-95",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "You raise your ___ to make a toast at dinner.",
+    "answer": "glass",
+    "distractors": [
+      "cup",
+      "mug",
+      "bottle"
+    ],
+    "firstLetterCue": "gl"
+  },
+  {
+    "id": "sent-96",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "You hang a ___ on the door to welcome guests to the party.",
+    "answer": "wreath",
+    "distractors": [
+      "banner",
+      "sign",
+      "garland"
+    ],
+    "firstLetterCue": "wr"
+  },
+  {
+    "id": "sent-97",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 3,
+    "sentence": "The bride walked down the ___ toward the altar.",
+    "answer": "aisle",
+    "distractors": [
+      "path",
+      "carpet",
+      "runway"
+    ],
+    "firstLetterCue": "ai"
+  },
+  {
+    "id": "sent-98",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 3,
+    "sentence": "You arrange flowers in a ___ for the dinner table.",
+    "answer": "vase",
+    "distractors": [
+      "pot",
+      "jar",
+      "pitcher"
+    ],
+    "firstLetterCue": "va"
+  },
+  {
+    "id": "sent-99",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 1,
+    "sentence": "You shake someone's ___ when you meet them for the first time.",
+    "answer": "hand",
+    "distractors": [
+      "arm",
+      "shoulder",
+      "wrist"
+    ],
+    "firstLetterCue": "ha"
+  },
+  {
+    "id": "sent-100",
+    "type": "sentence-completion",
+    "theme": "social",
+    "difficulty": 2,
+    "sentence": "The DJ played music through the large ___ at the party.",
+    "answer": "speakers",
+    "distractors": [
+      "amplifier",
+      "microphone",
+      "radio"
+    ],
+    "firstLetterCue": "sp"
+  }
 ]
